@@ -1,0 +1,141 @@
+<div id='zeroDivIconButton' class='animatedButton'
+     style="position: absolute;
+     height: 30px;
+     width: 30px;
+     top: 90px;
+     z-index: 3;
+     display: block;">
+    <img style='
+         width:30px; 
+         height:30px; 
+         opacity: 0.9;
+         z-index: 1;' 
+         src="files/images/icons/configuration/zeroDiv.png" alt="Mountain View">
+</div>
+
+<script>
+    var zeroDivIconButton = document.getElementById("zeroDivIconButton");
+    zeroDivIconButton.addEventListener("click", showConfigurationArea, false);
+    
+    function zeroDivArea()
+    {
+        if (size === "2")
+        {
+            var presentationArea = document.getElementById("presentationArea");
+            presentationArea.style.transitionProperty = "all";
+            presentationArea.style.transitionDuration = "0.4s";
+            presentationArea.style.width = $(window).width() - 180 + "px";
+        }
+        
+        var configurationArea = document.getElementById("configurationArea");
+        configurationArea.style.transitionProperty = "all";
+        configurationArea.style.transitionDuration = "0.4s";
+        configurationArea.style.right = 180 + "px";
+        
+        var sessionArea = document.getElementById("sessionArea");
+        sessionArea.style.transitionProperty = "all";
+        sessionArea.style.transitionDuration = "0.4s";
+        sessionArea.style.width = 0 + "px";
+        
+        var configurationBar = document.getElementById("configurationBar");
+        configurationBar.style.transitionProperty = "all";
+        configurationBar.style.transitionDuration = "0.4s";
+        configurationBar.style.right = 360 + "px";
+        
+        var displaceIcon = document.getElementById("displaceIcon");
+        displaceIcon.style.transitionProperty = "all";
+        displaceIcon.style.transitionDuration = "0.4s";
+        displaceIcon.style.right = 360 + "px";
+        
+    }
+    
+    function oneDivArea()
+    {
+        if (size === "2")
+        {
+            var presentationArea = document.getElementById("presentationArea");
+            presentationArea.style.transitionProperty = "all";
+            presentationArea.style.transitionDuration = "0.4s";
+            presentationArea.style.width = $(window).width() - 600 + "px";
+        }
+        
+        var configurationArea = document.getElementById("configurationArea");
+        configurationArea.style.transitionProperty = "all";
+        configurationArea.style.transitionDuration = "0.4s";
+        configurationArea.style.right = 600 + "px";
+        
+        var sessionArea = document.getElementById("sessionArea");
+        sessionArea.style.transitionProperty = "all";
+        sessionArea.style.transitionDuration = "0.4s";
+        sessionArea.style.width = 420 + "px";
+        
+        var configurationBar = document.getElementById("configurationBar");
+        configurationBar.style.transitionProperty = "all";
+        configurationBar.style.transitionDuration = "0.4s";
+        configurationBar.style.right = 780 + "px";
+        
+        var displaceIcon = document.getElementById("displaceIcon");
+        displaceIcon.style.transitionProperty = "all";
+        displaceIcon.style.transitionDuration = "0.4s";
+        displaceIcon.style.right = 780 + "px";
+        
+    }
+    
+    function twoDivArea()
+    {
+        if (size === "2")
+        {
+            var presentationArea = document.getElementById("presentationArea");
+            presentationArea.style.transitionProperty = "all";
+            presentationArea.style.transitionDuration = "0.4s";
+            presentationArea.style.width = $(window).width() - 880 + "px";
+        }
+        
+        var configurationArea = document.getElementById("configurationArea");
+        configurationArea.style.transitionProperty = "all";
+        configurationArea.style.transitionDuration = "0.4s";
+        configurationArea.style.right = 880 + "px";
+        
+        var sessionArea = document.getElementById("sessionArea");
+        sessionArea.style.transitionProperty = "all";
+        sessionArea.style.transitionDuration = "0.4s";
+        sessionArea.style.width = 700 + "px";
+        
+        var configurationBar = document.getElementById("configurationBar");
+        configurationBar.style.transitionProperty = "all";
+        configurationBar.style.transitionDuration = "0.4s";
+        configurationBar.style.right = 1060 + "px";
+        
+        var displaceIcon = document.getElementById("displaceIcon");
+        displaceIcon.style.transitionProperty = "all";
+        displaceIcon.style.transitionDuration = "0.4s";
+        displaceIcon.style.right = 1060 + "px";
+        
+    }
+    
+    function showConfigurationArea()
+    {
+        if (ConfigurationAreaSize === "1")
+        {
+            zeroDivArea();
+            
+            ConfigurationAreaSize = "2";
+        } else if (ConfigurationAreaSize === "2")
+        {
+            oneDivArea();
+            
+            ConfigurationAreaSize = "3";
+        } else if (ConfigurationAreaSize === "3")
+        {
+            twoDivArea();
+            
+            ConfigurationAreaSize = "4";
+        } else if (ConfigurationAreaSize === "4")
+        {
+            oneDivArea();
+            
+            ConfigurationAreaSize = "1";
+        }
+    }
+    
+</script>
